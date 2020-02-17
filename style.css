@@ -1,0 +1,177 @@
+html {
+    scroll-behavior: smooth;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background:#121212;
+    color:aqua;
+}
+
+.container {
+    height:100vh;
+    margin:auto;
+	overflow:hidden;
+}
+
+#home {
+    background: url(img/clubpic.jpg) no-repeat 50% 50%;
+    background-attachment: fixed;
+	display: table;
+	height: 100%;
+	width: 100%;
+    background-size: cover;
+    color: white;
+}
+
+.landing-text {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+#home h1 {
+	font-size: 500%;
+	line-height: 1.2;
+}
+
+/* ------------------------------ Contact form ------------------------------ */
+
+#emailbutton:hover{
+	cursor:pointer;
+}
+
+#emailbutton span{
+	display:inline-block;
+	position:relative;
+	transition:0.5s;
+}
+
+#emailbutton span:after{
+	content: "\00bb";
+	position: absolute;
+	opacity:0;
+	top: 0;
+	right:-20px;
+	transition:0.5s;
+	color: aqua;
+}
+
+#emailbutton:hover span {
+	padding-right: 25px;
+	color: aqua;
+}
+
+#resumeButton:hover span:after,
+#emailbutton:hover span:after,
+.articleLinks:hover span:after {
+	opacity:1;
+	right:0;
+}
+
+#contact {
+	background:#121212;
+}
+
+#contactcontain {
+	height:100%;
+}
+
+#emailbutton {
+	position:absolute;
+	height:38px;
+	width:100px;
+	margin-left:-50px;
+	background-color:#212121;
+	border:0px;
+	color:white;
+	transition:all 0.5s;
+	border-radius:2px;
+}
+
+.form {
+	width:50%;
+	position:relative;
+	height:75px;
+	overflow:hidden;
+	left:50%;
+	margin-left:-25%;
+	color:grey;
+}
+
+.form input{
+	width:100%;
+	height:100%;
+	color:grey;
+	padding-top:20px;
+	border:none;
+	outline:none;
+	background-color:#111111;
+}
+
+.form label{
+	position:absolute;
+	bottom:0px;
+	left: 0%;
+	height:100%;
+	width:100%;
+	pointer-events:none;
+	border-bottom:1px solid black;
+
+}
+
+.form label::after {
+	content: "";
+	position: absolute;
+	left:0px;
+	bottom:-1px;
+	height:100%;
+	width:100%;
+	border-bottom:3px solid aqua;
+	transform:translateX(-100%);
+	transition: all 0.3s ease;
+}
+
+.content-name,
+.content-email,
+.content-message{
+	position: absolute;
+	bottom: 5px;
+	left: 0px;
+	transition: all 0.3s ease;
+
+}
+
+/* Animation on each of the form inputs (makes text rise above input box)*/
+.form input:focus + .label-name .content-name, 
+.form input:valid + .label-name .content-name,
+.form input:focus + .label-email .content-email, 
+.form input:valid + .label-email .content-email,
+.form input:focus + .label-message .content-message, 
+.form input:valid + .label-message .content-message{
+	transform: translateY(-150%);
+	font-size:1em;
+	color: aqua;
+}
+
+.form input:focus .label-name::after, 
+.form input:valid + .label-name::after,
+.form input:focus .label-email::after, 
+.form input:valid + .label-email::after,
+.form input:focus .label-message::after, 
+.form input:valid + .label-message::after{
+	transform: translateX(0%);
+}
+
+footer {
+	color:#989b9f;
+	background-color:#343940;
+	text-align:center;
+	padding:20px;
+}
+
