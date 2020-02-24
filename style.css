@@ -14,7 +14,6 @@ body {
 }
 
 .container {
-    height:100vh;
     margin:auto;
 	overflow:hidden;
 }
@@ -76,10 +75,6 @@ body {
 
 #contact {
 	background:#121212;
-}
-
-#contactcontain {
-	height:100%;
 }
 
 #emailbutton {
